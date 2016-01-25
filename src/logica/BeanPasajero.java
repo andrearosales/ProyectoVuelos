@@ -81,16 +81,6 @@ public class BeanPasajero {
 		}
 	}
 
-	public Pasajero infoPasajero(int documento) {
-		if (entityManager != null) {
-			TypedQuery<Pasajero> query = entityManager
-					.createQuery("SELECT OBJECT(p) FROM Pasajero p WHERE p.documento= :documentoP", Pasajero.class)
-					.setParameter("documentoP", documento);
-			return query.getSingleResult();
-		} else
-			return null;
-	}
-
 	public void borrarPasajero(int documento) {
 		if (entityManager != null) {
 			entityManager.getTransaction().begin();

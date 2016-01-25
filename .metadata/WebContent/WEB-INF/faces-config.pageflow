@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14536016622444" configfile="/ProyectoVuelos/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="123" y="119" id="pf14536017363955" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14536749635236 pf14537357662030" path="/index.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="pasajeros.xhtml" x="278" y="232" id="pf14536749635237" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14536763397698" inlinks="pf14536749635236" path="/pasajeros.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="agregar_Pasajero.xhtml" x="460" y="121" id="pf14536763397699" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14536763397698" path="/agregar_Pasajero.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="rutas.xhtml" x="120" y="288" id="pf14537357662041" inlinks="pf14537357662030" path="/rutas.xhtml"/>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" comment="" id="pf14536016622444" configfile="/ProyectoVuelos/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="60" y="192" id="pf14536017363955" referenceLink="//@navigationRule.6/@fromViewId|" outlinks="pf14536749635236 pf14537357662030 pf14537404527732 pf14537404887376 pf14537407115198" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pasajeros.xhtml" x="276" y="24" id="pf14536749635237" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14536763397698" inlinks="pf14536749635236" path="/pasajeros.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="agregar_Pasajero.xhtml" x="528" y="24" id="pf14536763397699" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14536763397698" path="/agregar_Pasajero.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="rutas.xhtml" x="287" y="108" id="pf14537357662041" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf14537404527733" inlinks="pf14537357662030" path="/rutas.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="agregar_Ruta.xhtml" x="538" y="108" id="pf14537404527734" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf14537404527733" path="/agregar_Ruta.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="vuelos.xhtml" x="283" y="279" id="pf14537404527735" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf14537404527732" path="/vuelos.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="reportes.xhtml" x="279" y="360" id="pf14537404887377" referenceLink="//@navigationRule.5/@navigationCase.0/@toViewId|" inlinks="pf14537404887376" path="/reportes.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="aviones.xhtml" x="280" y="192" id="pf14537407115199" referenceLink="//@navigationRule.6/@navigationCase.0/@toViewId|" outlinks="pf145374279755510" inlinks="pf14537407115198" path="/aviones.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="agregar_Avion.xhtml" x="534" y="192" id="pf145374279755511" inlinks="pf145374279755510" path="/agregar_Avion.xhtml"/>
   <links id="pf14536749635236" target="pf14536749635237" source="pf14536017363955" outcome="pasajeros.xhtml" redirect="true"/>
   <links id="pf14536763397698" target="pf14536763397699" source="pf14536749635237" outcome="agregar_Pasajero.xhtml"/>
   <links id="pf14537357662030" target="pf14537357662041" source="pf14536017363955" outcome="rutas.xhtml"/>
+  <links id="pf14537404527733" target="pf14537404527734" source="pf14537357662041" outcome="agregar_Ruta.xhtml"/>
+  <links id="pf14537404527732" target="pf14537404527735" source="pf14536017363955" outcome="vuelos.xhtml"/>
+  <links id="pf14537404887376" target="pf14537404887377" source="pf14536017363955" outcome="reportes.xhtml"/>
+  <links id="pf14537407115198" target="pf14537407115199" source="pf14536017363955" outcome="aviones.xhtml"/>
+  <links id="pf145374279755510" target="pf145374279755511" source="pf14537407115199" outcome="agregar_Avion.xhtml"/>
 </pageflow:Pageflow>

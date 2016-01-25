@@ -7,12 +7,17 @@
 	<managed-bean>
 		<managed-bean-name>pasajeroMB</managed-bean-name>
 		<managed-bean-class>control.PasajeroMB</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
+		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 	<managed-bean>
 		<managed-bean-name>rutaMB</managed-bean-name>
 		<managed-bean-class>control.RutaMB</managed-bean-class>
-		<managed-bean-scope>session</managed-bean-scope>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>avionMB</managed-bean-name>
+		<managed-bean-class>control.AvionMB</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
 	</managed-bean>
 	<navigation-rule>
 		<display-name>index.xhtml</display-name>
@@ -37,6 +42,46 @@
 		<navigation-case>
 			<from-outcome>rutas.xhtml</from-outcome>
 			<to-view-id>/rutas.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>rutas.xhtml</display-name>
+		<from-view-id>/rutas.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>agregar_Ruta.xhtml</from-outcome>
+			<to-view-id>/agregar_Ruta.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>index.xhtml</display-name>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>vuelos.xhtml</from-outcome>
+			<to-view-id>/vuelos.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>index.xhtml</display-name>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>reportes.xhtml</from-outcome>
+			<to-view-id>/reportes.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>index.xhtml</display-name>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>aviones.xhtml</from-outcome>
+			<to-view-id>/aviones.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>aviones.xhtml</display-name>
+		<from-view-id>/aviones.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>agregar_Avion.xhtml</from-outcome>
+			<to-view-id>/agregar_Avion.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 

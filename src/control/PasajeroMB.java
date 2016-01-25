@@ -28,25 +28,7 @@ public class PasajeroMB {
 	public List<Pasajero> listaPasajeros(){
 		return facadePasajero.obtenerPasajeros();
 	}
-	
-	public String mostrarInfo(int pasajero){
-		String info="";
-		Pasajero p = facadePasajero.infoPasajero(pasajero);
-		if(p==null){ //Usado como prueba
-			info+="Tipo documento: C.C.";
-			info+="\nDocumento: 1019063319";
-			info+="\nNombre: Andrea";
-			info+="\nApellido: Rosales";
-			info+="\nFecha de Nacimiento: 1991-09-15";
-			return info;
-		}
-		info+="Tipo documento: "+p.getTipoDocumento();
-		info+="\nDocumento: "+p.getDocumento();
-		info+="\nNombre: "+p.getNombre();
-		info+="\n";
-		return info;
-	}
-	
+		
 	public String agregarPasajero(){
 		facadePasajero.agregarPasajero(nombre,apellido,nacimiento,documento,tipoDocumento);
 		return "pasajeros.xhtml";
