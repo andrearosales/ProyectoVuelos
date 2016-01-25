@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14536016622444" configfile="/ProyectoVuelos/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="123" y="119" id="pf14536017363955" outlinks="pf14536749635236" path="/index.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="pasajeros.xhtml" x="278" y="232" id="pf14536749635237" outlinks="pf14536763397698" inlinks="pf14536749635236" path="/pasajeros.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="agregar_Pasajero.xhtml" x="460" y="121" id="pf14536763397699" inlinks="pf14536763397698" path="/agregar_Pasajero.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="123" y="119" id="pf14536017363955" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14536749635236 pf14537357662030" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="pasajeros.xhtml" x="278" y="232" id="pf14536749635237" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf14536763397698" inlinks="pf14536749635236" path="/pasajeros.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="agregar_Pasajero.xhtml" x="460" y="121" id="pf14536763397699" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14536763397698" path="/agregar_Pasajero.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="rutas.xhtml" x="120" y="288" id="pf14537357662041" inlinks="pf14537357662030" path="/rutas.xhtml"/>
   <links id="pf14536749635236" target="pf14536749635237" source="pf14536017363955" outcome="pasajeros.xhtml" redirect="true"/>
   <links id="pf14536763397698" target="pf14536763397699" source="pf14536749635237" outcome="agregar_Pasajero.xhtml"/>
+  <links id="pf14537357662030" target="pf14537357662041" source="pf14536017363955" outcome="rutas.xhtml"/>
 </pageflow:Pageflow>

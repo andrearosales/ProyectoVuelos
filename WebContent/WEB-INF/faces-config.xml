@@ -9,6 +9,11 @@
 		<managed-bean-class>control.PasajeroMB</managed-bean-class>
 		<managed-bean-scope>session</managed-bean-scope>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>rutaMB</managed-bean-name>
+		<managed-bean-class>control.RutaMB</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
 	<navigation-rule>
 		<display-name>index.xhtml</display-name>
 		<from-view-id>/index.xhtml</from-view-id>
@@ -24,6 +29,14 @@
 		<navigation-case>
 			<from-outcome>agregar_Pasajero.xhtml</from-outcome>
 			<to-view-id>/agregar_Pasajero.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>index.xhtml</display-name>
+		<from-view-id>/index.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>rutas.xhtml</from-outcome>
+			<to-view-id>/rutas.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 

@@ -3,19 +3,17 @@ package control;
 import java.util.Date;
 import java.util.List;
 
-import javax.annotation.ManagedBean;
 import javax.ejb.EJB;
 import javax.faces.context.FacesContext;
 import javax.faces.context.Flash;
 
 import logica.BeanPasajero;
-import logica.BeanPasajeroRemote;
 import model.Pasajero;
 
 public class PasajeroMB {
 	
 	@EJB
-	private BeanPasajeroRemote facadePasajero;
+	private BeanPasajero facadePasajero;
 	
 	private Integer documento;
 	private String apellido;

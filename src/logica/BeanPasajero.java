@@ -8,8 +8,6 @@ import java.util.List;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.persistence.TypedQuery;
@@ -20,7 +18,7 @@ import model.Pasajero;
  * Session Bean implementation class BeanPasajero
  */
 @Stateless
-public class BeanPasajero implements BeanPasajeroRemote {
+public class BeanPasajero {
 
 	/*
 	 * private EntityManagerFactory emf; private EntityManager entityManager;
@@ -44,7 +42,6 @@ public class BeanPasajero implements BeanPasajeroRemote {
 		 */
 	}
 
-	@Override
 	public List<Pasajero> obtenerPasajeros() {
 		if (entityManager != null) {
 			Query query = entityManager.createNamedQuery("Pasajero.findAll");
@@ -84,7 +81,6 @@ public class BeanPasajero implements BeanPasajeroRemote {
 		}
 	}
 
-	@Override
 	public Pasajero infoPasajero(int documento) {
 		if (entityManager != null) {
 			TypedQuery<Pasajero> query = entityManager
@@ -95,19 +91,17 @@ public class BeanPasajero implements BeanPasajeroRemote {
 			return null;
 	}
 
-	@Override
 	public void borrarPasajero(int documento) {
 		if (entityManager != null) {
 			entityManager.getTransaction().begin();
-			Pasajero employee = entityManager.find(Pasajero.class, documento);
-			entityManager.remove(employee);
+			Pasajero p = entityManager.find(Pasajero.class, documento);
+			entityManager.remove(p);
 			entityManager.getTransaction().commit();
 		}
 		else
 			System.out.println("documento "+documento);
 	}
 
-	@Override
 	public void agregarPasajero(String nombre, String apellido, Date nacimiento, Integer documento,
 			String tipoDocumento) {
 		if (entityManager != null) {
@@ -126,7 +120,6 @@ public class BeanPasajero implements BeanPasajeroRemote {
 		
 	}
 
-	@Override
 	public void modificarPasajero(String nombre, String apellido, Date nacimiento, Integer documento) {
 		if (entityManager != null) {
 			entityManager.getTransaction().begin();
